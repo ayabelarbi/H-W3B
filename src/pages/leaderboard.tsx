@@ -9,7 +9,7 @@ import flowRound from "../assets/flowRound.png";
 import "react-toastify/dist/ReactToastify.css";
 
 
-const Demo = () => {
+const leaderboard = () => {
 
   // Use
   return (
@@ -19,4 +19,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default leaderboard;
