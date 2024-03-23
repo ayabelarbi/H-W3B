@@ -1,22 +1,37 @@
-// ClientPage.tsx
-import React, { useEffect, useState } from 'react';
-import Map from './Map_shared'; // Assurez-vous que le chemin d'importation est correct
+import React, { ReactNode, useEffect, useState } from 'react';
+import Map from './Map_shared'; // Assurez-vous que le chemin est correct
+import { Box, Button } from '@chakra-ui/react';
 
 function ClientPage() {
-  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
+const [restaurants, setRestaurants] = useState<{
+    lng: number;
+    name: ReactNode;
+    lat: number; id: string 
+}[]>([]);
 
-  useEffect(() => {
-    const savedLocationString = localStorage.getItem('selectedLocation');
-    if (savedLocationString) {
-      const savedLocation = JSON.parse(savedLocationString);
-      setLocation(savedLocation);
-    }
-  }, []);
+useEffect(() => {
+    const storedRestaurants = JSON.parse(localStorage.getItem('restaurants') || '[]');
+    setRestaurants(storedRestaurants);
+}, []);
+
+const removeRestaurant = (id: string) => {
+    const updatedRestaurants = restaurants.filter(restaurant => restaurant.id !== id);
+    localStorage.setItem('restaurants', JSON.stringify(updatedRestaurants));
+    setRestaurants(updatedRestaurants);
+};
 
   return (
     <div>
-      <h2>Client Page</h2>
-      {location ? <Map lat={location.lat} lng={location.lng} /> : <p>No location selected</p>}
+      <h2>My Restaurants</h2>
+      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+        {restaurants.map(restaurant => (
+          <Box key={restaurant.id} p="5" m="2" borderWidth="1px" borderRadius="lg">
+            <Map lat={restaurant.lat} lng={restaurant.lng} />
+            <p>{restaurant.name}</p>
+            <Button colorScheme="red" onClick={() => removeRestaurant(restaurant.id)}>Remove</Button>
+          </Box>
+        ))}
+      </div>
     </div>
   );
 }
