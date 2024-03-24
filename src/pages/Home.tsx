@@ -26,7 +26,7 @@ function Home() {
     flexDirection="column"
     alignItems="center"
     justifyContent="center"
-    bgGradient="linear(to-b, #111950, #1A1A1A, #111950)"
+    bgGradient="linear(to-b, #CC9975, #f5f5dc, #ffffff )"
     height="100vh"
     width="100vw"
     >
@@ -39,14 +39,18 @@ function Home() {
       <Button
          colorScheme='whiteAlpha'
          borderRadius="10px"       
-         textColor="white"
+         textColor="black"
          height="75px"
-         width="250px"
+         width="200px"
+         
          onClick={getstarted}
          border="1px solid black"// Add a border color
          _hover={{ border: "1px solid black" }} // Remove the border on hover
         >
-        <Heading>Who are you</Heading>
+        <Heading
+        fontFamily={'Roboto'}
+        fontSize="xl"
+        >Who are you</Heading>
       </Button>
     </Box>
   );

@@ -8,7 +8,7 @@
     justify-content: center;
     height: 100vh; /* Full height of the viewport */
     background: linear-gradient(45deg, #3D2C5F, #2C3E50); /* Gradient background */
-    color: white; /* Text color */
+    color: black; /* Text color */
 
 }
   
@@ -27,9 +27,10 @@
   }
   
   nav span {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 1.2rem;
+    color: black;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
   }
   
   button {
@@ -41,35 +42,43 @@
     border-radius: 0.25rem; /* Slightly rounded corners for the buttons */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
+    
   }
   
   button:hover, button:focus {
     background: transparent; /* Ensures background stays transparent on hover/focus */
-    color: #3D2C5F; /* Changes text color on hover/focus for visual feedback */
+    color: black; /* Changes text color on hover/focus for visual feedback */
     transform: translateY(-2px); /* Slight raise effect on hover */
   }
   
   
   button:hover {
-    background: white;
-    color: #3D2C5F;
+    background:#906b50;
+    color: black;
     transform: translateY(-2px); /* Slight raise effect on hover */
   }
   
   /* Title styles */
   .title {
-    color: white;
-    font-size: 2.5rem;
+    color: black;
+    font-size: 6.5rem;
     text-align: center;
     margin: 3rem 0 1.5rem; /* Margin around the title */
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-weight: 600;
+
+
   }
   
   /* Subtitle styles */
   .subtitle {
-    color: white;
-    font-size: 1.25rem;
+    color: black;
+    font-size: 1.15rem;
     text-align: center;
     margin-bottom: 2rem; /* Space below subtitle */
+    font-family: 'Lora', sans-serif;
+    font-style: italic;
   }
   
   /* You can further adjust the spacing, colors, and other properties as needed. */
