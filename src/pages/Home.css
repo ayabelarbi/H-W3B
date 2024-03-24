@@ -1,0 +1,76 @@
+/* Home.css */
+
+/* General Styles */
+.Box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(45deg, #3D2C5F, #2C3E50); /* Gradient background */
+    color: white; /* Text color */
+
+}
+  
+  /* Navigation Styles */
+  nav {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem; /* Padding on the sides */
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  nav span {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  button {
+    background: transparent;
+    align-items: ;
+    margin-right: 1rem; /* Space between buttons */
+    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Padding inside the buttons */
+    border-radius: 0.25rem; /* Slightly rounded corners for the buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
+  }
+  
+  button:hover, button:focus {
+    background: transparent; /* Ensures background stays transparent on hover/focus */
+    color: #3D2C5F; /* Changes text color on hover/focus for visual feedback */
+    transform: translateY(-2px); /* Slight raise effect on hover */
+  }
+  
+  
+  button:hover {
+    background: white;
+    color: #3D2C5F;
+    transform: translateY(-2px); /* Slight raise effect on hover */
+  }
+  
+  /* Title styles */
+  .title {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 3rem 0 1.5rem; /* Margin around the title */
+  }
+  
+  /* Subtitle styles */
+  .subtitle {
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 2rem; /* Space below subtitle */
+  }
+  
+  /* You can further adjust the spacing, colors, and other properties as needed. */
+  
