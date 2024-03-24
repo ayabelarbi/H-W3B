@@ -76,12 +76,12 @@ function Navbar() {
         borderRadius="10px"       
         textColor="white"
         height="55px"
-        width="10px"
+        width="150px"
         margin="10px"
         onClick={gotoMap}
     
         _hover={{ border: "1px solid black" }}>Login</Button>
-      <Button colorScheme='blue'
+      {/* <Button colorScheme='blue'
         borderRadius="10px"       
         textColor="white"
         height="55px"
@@ -89,7 +89,7 @@ function Navbar() {
         margin="10px"
         onClick={gotoMap}
         border="1px solid black"// Add a border color
-        _hover={{ border: "1px solid black" }}>SignUp</Button>
+        _hover={{ border: "1px solid black" }}>SignUp</Button> */}
     </Flex>
 
     );
