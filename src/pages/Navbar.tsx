@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, createContext } from "react";
 import { Link } from "react-router-dom";
 
 import { Magic } from "magic-sdk";
@@ -10,6 +10,7 @@ import { Button, HStack, Input } from "@chakra-ui/react";
 import { Flex } from "@chakra-ui/react";
 import { Spacer } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../main";
 
 const apiKey: string = "pk_live_6E23BEDC7CE6E1F0" || "";
 const magic = new Magic(apiKey, {
@@ -20,12 +21,14 @@ const magic = new Magic(apiKey, {
   ],
 });
 
+
 const Navbar = () => {
   const [email, setEmail] = useState("");
   const [publicAddress, setPublicAddress] = useState("");
   const [destinationAddress, setDestinationAddress] = useState("");
   const [sendXTZAmount, setSendXTZAmount] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+
   const [userMetadata, setUserMetadata] = useState({});
   const [sendingTransaction, setSendingTransaction] = useState(false);
 
