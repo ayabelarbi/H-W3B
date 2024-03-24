@@ -55,10 +55,7 @@ const RetailPage = () => {
     >
       <Navbar />
 
-      <form onSubmit={handleSubmit}>
-     
-        <button type="submit">Submit</button>
-      </form>
+      
 
       <div className="information_retail" style={{ width: '80%', maxWidth: '960px', margin: '0 auto', padding: '20px', boxSizing: 'border-box' }}>
         <style dangerouslySetInnerHTML={{ __html: `
@@ -117,7 +114,7 @@ const RetailPage = () => {
   </div>
 
       <Button onClick={handleSubmit} mt="4" colorScheme="blue">
-        Enregistrer la Localisation
+        Save the location
       </Button>
 
     </Box>

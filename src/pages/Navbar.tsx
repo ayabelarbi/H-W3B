@@ -62,6 +62,11 @@ const Navbar = () => {
     setIsLoggedIn(false);
   };
 
+  const gotoSubscribe = () => {
+    history("/Subscribe");
+  };
+
+
   const handleMagicSign = async () => {
     setSendingTransaction(true);
     const Tezos = new TezosToolkit("https://ghostnet.tezos.marigold.dev");
@@ -135,6 +140,24 @@ const Navbar = () => {
         _hover={{ border: "1px solid black" }}
       >
         Collections
+      </Button>
+
+      <Button
+        colorScheme="whiteAlpha"
+        borderRadius="10px"
+        textColor="white"
+        height="55px"
+        width="150px"
+        margin="10px"
+        fontFamily={"Roboto"}
+        color={"black"}
+        onClick={gotoSubscribe}
+        justifyContent="center" // This centers the buttons horizontally
+        alignItems="center"
+        border="1px solid black" // Add a border color
+        _hover={{ border: "1px solid black" }}
+      >
+        Subscribe
       </Button>
 
       <Spacer />
