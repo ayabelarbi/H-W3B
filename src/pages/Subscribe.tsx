@@ -4,21 +4,12 @@ import Navbar from './Navbar';
 
 const Subscribe = () => {
   const plans = [
-    { price: 29, currency: '€', features: ['Beginner', 'Accès au réseau LoyalT', 'Installation gratuite du terminal NFC', '2 quêtes mensuelles', '100 NFTs disponible' ] },
+    { price: 39, currency: '€', features: ['Beginner', 'Accès au réseau LoyalT', 'Installation gratuite du terminal NFC', '2 quêtes mensuelles', '100 NFTs disponible' ] },
     { price: 59, currency: '€', features: ['Advanced', 'Accès au réseau LoyalT', 'Installation gratuite du terminal NFC', '4 quêtes mensuelles', '250 NFTs disponible'] },
     { price: 69, currency: '€', features: ['Premium', 'Accès au réseau LoyalT', 'Installation gratuite du terminal NFC', '8 quêtes mensuelles', 'NFTs illimités'] },
   ];
 
-  
-  
-  Premium
-
-
-
-  
-  
-  
-
+ 
   return (
     <Box 
         display="flex"
@@ -45,6 +36,7 @@ const Subscribe = () => {
               maxW="sm"
               bg="rgba(255, 255, 255, 0.2)"
               backdropFilter="blur(10px)"
+            
               font-family="Roboto"
               border="1px solid rgba(255, 255, 255, 0.3)"
               boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)"
