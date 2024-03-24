@@ -12,6 +12,7 @@ import GetStarted from "./pages/getstarted.tsx";
 import RetailPage from "./pages/RetailPage.tsx";
 import ClientPage from "./pages/ClientPage.tsx";
 
+
 import Fonts from "./utils/fonts.tsx";
 import theme from "./utils/theme.tsx";
 
