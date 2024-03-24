@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet'; // Importation de Leaflet pour accéder aux types
@@ -17,7 +16,8 @@ function LocationMarker() {
 }
 
 function RetailPage() {
-  // Supposons une initialisation de restaurants ou une autre logique ici
+  
+  
 
   return (
     <Box
@@ -78,7 +78,7 @@ function RetailPage() {
       </div>
 
       <div style={{ height: '400px', width: '400px', position: 'fixed', right: '10px', top: '30%', zIndex: 1000, left: '70%' }}>
-        <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '100%', width: '100%' }}>
+        <MapContainer center={[48.8566, 2.3522]} zoom={13} style={{ height: '100%', width: '100%' }}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <LocationMarker />
         </MapContainer>

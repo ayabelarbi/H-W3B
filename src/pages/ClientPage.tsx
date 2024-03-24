@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import Map from './Map_shared'; // Assurez-vous que le chemin est correct
 import { Box, Button } from '@chakra-ui/react';
+import Navbar from './Navbar';
 
 function ClientPage() {
 const [restaurants, setRestaurants] = useState<{
@@ -21,6 +22,19 @@ const removeRestaurant = (id: string) => {
 };
 
   return (
+  <Box
+  display="flex"
+  flexDirection="column"
+  alignItems="center"
+  justifyContent="center"
+  bgGradient="linear(to-b, #111950, #1A1A1A, #111950)"
+  height="100vh"
+  width="100vw"
+>
+
+
+<Navbar /> 
+
     <div>
       <h2>My Restaurants</h2>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
@@ -30,9 +44,12 @@ const removeRestaurant = (id: string) => {
             <p>{restaurant.name}</p>
             <Button colorScheme="red" onClick={() => removeRestaurant(restaurant.id)}>Remove</Button>
           </Box>
+          
         ))}
       </div>
     </div>
+
+    </Box>
   );
 }
 

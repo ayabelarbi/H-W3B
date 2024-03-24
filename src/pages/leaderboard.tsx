@@ -11,10 +11,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 const leaderboard = () => {
 
-  // Use
+  
   return (
    <Box>
-    <h1> PAGE 1 </h1>
+    <h1> Classement </h1>
     </Box>
   );
 };

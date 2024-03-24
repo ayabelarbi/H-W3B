@@ -18,6 +18,10 @@ function Navbar() {
       const gotoLeaderboard = () => {
         history("/leaderboard");
       };
+
+      const gotoAddChallenge = () => {
+        history("/addChallenge");
+      }
     
       
 
