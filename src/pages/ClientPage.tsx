@@ -10,6 +10,8 @@ const [restaurants, setRestaurants] = useState<{
     lat: number; id: string 
 }[]>([]);
 
+
+console.log(restaurants);
 useEffect(() => {
     const storedRestaurants = JSON.parse(localStorage.getItem('restaurants') || '[]');
     setRestaurants(storedRestaurants);
@@ -27,7 +29,7 @@ const removeRestaurant = (id: string) => {
   flexDirection="column"
   alignItems="center"
   justifyContent="center"
-  bgGradient="linear(to-b, #111950, #1A1A1A, #111950)"
+  bgGradient="linear(to-b, #CC9975, #f5f5dc, #ffffff )"
   height="100vh"
   width="100vw"
 >

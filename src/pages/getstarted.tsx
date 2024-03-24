@@ -24,29 +24,53 @@ const getStarted = () => {
 
 
     <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      bgGradient="linear(to-b, #111950, #1A1A1A, #111950)"
-      height="100vh"
-      width="100vw"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    justifyContent="center"
+    bgGradient="linear(to-b, #CC9975, #f5f5dc, #ffffff )"
+    height="100vh"
+    width="100vw"
     >
 
 
     <Navbar /> 
       
       <VStack spacing={8}>
-        <Heading color="white">Get Started</Heading>
+        <Heading color="black" fontFamily={'Roboto'}>Get Started</Heading>
         <Button
-          colorScheme="teal"
+          colorScheme='whiteAlpha'
+          borderRadius="10px"
+          textColor="black"
+          height="55px"
+          width="150px"
+          margin="10px"
+         
+          justifyContent="center" // This centers the buttons horizontally
+          alignItems="center"
+          border="1px solid black"// Add a border color
+          _hover={{ border: "1px solid black" }}
+          fontFamily={'Roboto'}
+         
           size="lg"
           onClick={gotoClientPage}
         >
           Client
         </Button>
         <Button
-          colorScheme="teal"
+          colorScheme='whiteAlpha'
+          borderRadius="10px"
+          textColor="black"
+          height="55px"
+          width="150px"
+          margin="10px"
+         
+          justifyContent="center" // This centers the buttons horizontally
+          alignItems="center"
+          border="1px solid black"// Add a border color
+          _hover={{ border: "1px solid black" }}
+          fontFamily={'Roboto'}
+         
           size="lg"
           onClick={gotoRetailPage}
         >

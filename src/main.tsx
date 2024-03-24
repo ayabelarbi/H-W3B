@@ -11,6 +11,7 @@ import Leaderboard from "./pages/leaderboard.tsx";
 import GetStarted from "./pages/getstarted.tsx";
 import RetailPage from "./pages/RetailPage.tsx";
 import ClientPage from "./pages/ClientPage.tsx";
+import Collection from "./pages/Collection.tsx";
 
 import Fonts from "./utils/fonts.tsx";
 import theme from "./utils/theme.tsx";
@@ -39,7 +40,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path='/getstarted' element={<GetStarted />} /> 
           <Route path='/RetailPage' element={<RetailPage />} />      
           <Route path='/ClientPage' element={<ClientPage />} />
-
+          <Route path='/Collection' element={<Collection />} />
+          
         </Routes>
       </ChakraProvider>
 

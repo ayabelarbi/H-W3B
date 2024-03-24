@@ -19,8 +19,8 @@ function Navbar() {
         history("/leaderboard");
       };
 
-      const gotoAddChallenge = () => {
-        history("/addChallenge");
+      const gotoCollection = () => {
+        history("/Collection");
       }
     
       
@@ -30,7 +30,7 @@ function Navbar() {
      
       <span>LOYALT</span>
 
-    
+      <Spacer />
       <Button 
         colorScheme='whiteAlpha'
         borderRadius="10px"
@@ -43,15 +43,16 @@ function Navbar() {
         alignItems="center"
         border="1px solid black"// Add a border color
         _hover={{ border: "1px solid black" }}
-
-        > 
-        Map</Button>
+        fontFamily={'Roboto'}
+        color={'black'}>Map</Button>
       <Button colorScheme='whiteAlpha'
         borderRadius="10px"       
         textColor="white"
         height="55px"
         width="150px"
         margin="10px"
+        fontFamily={'Roboto'}
+        color={'black'}
         onClick={gotoLeaderboard}
         justifyContent="center" // This centers the buttons horizontally
         alignItems="center" 
@@ -63,33 +64,30 @@ function Navbar() {
         height="55px"
         width="150px"
         margin="10px"
-        onClick={gotoMap}
+        fontFamily={'Roboto'}
+        color={'black'}
+        onClick={gotoCollection}
         justifyContent="center" // This centers the buttons horizontally
         alignItems="center" 
         border="1px solid black"// Add a border color
-        _hover={{ border: "1px solid black" }}>Add your challenge</Button>
+        _hover={{ border: "1px solid black" }}>Collections</Button>
 
+    
       <Spacer />
 
     
-      <Button colorScheme='transparent'
-        borderRadius="10px"       
+      
+      <Button colorScheme='whiteAlpha'
+        borderRadius="20px"       
         textColor="white"
         height="55px"
-        width="150px"
+        width="100px"
         margin="10px"
         onClick={gotoMap}
-    
-        _hover={{ border: "1px solid black" }}>Login</Button>
-      {/* <Button colorScheme='blue'
-        borderRadius="10px"       
-        textColor="white"
-        height="55px"
-        width="150px"
-        margin="10px"
-        onClick={gotoMap}
+        fontFamily={'Roboto'}
+        color={'black'}
         border="1px solid black"// Add a border color
-        _hover={{ border: "1px solid black" }}>SignUp</Button> */}
+        _hover={{ border: "1px solid black" }}>Login</Button>
     </Flex>
 
     );
