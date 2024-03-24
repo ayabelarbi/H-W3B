@@ -1,0 +1,19 @@
+.title {
+    color: black;
+    font-size: 4rem;
+    text-align: center;
+    margin: 3rem 0 1.5rem; /* Margin around the title */
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-weight: 600;
+  }
+
+.subtitles {
+    color: black;
+    font-size: 3rem;
+    text-align: left;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: '0px';
+
+    font-weight: 500;
+}

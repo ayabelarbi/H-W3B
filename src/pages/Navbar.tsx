@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Magic } from "magic-sdk";
 import { TaquitoExtension } from "@magic-ext/taquito";
@@ -79,7 +80,9 @@ const Navbar = () => {
 
   return (
     <Flex as="nav" width="100%" padding="4" boxShadow="md">
-      <span>LOYALT</span>
+      <Link to="/">
+        <span>LOYALT</span>
+      </Link>
 
       <Spacer />
       <Button
