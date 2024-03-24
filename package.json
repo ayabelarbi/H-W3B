@@ -19,6 +19,7 @@
     "@magic-ext/taquito": "^20.0.1",
     "@pushprotocol/restapi": "^1.4.38",
     "@pushprotocol/uiweb": "^1.1.19",
+    "@taquito/taquito": "^19.1.0",
     "crypto-browserify": "^3.12.0",
     "ethers": "^5.7.2",
     "firebase": "^10.9.0",
