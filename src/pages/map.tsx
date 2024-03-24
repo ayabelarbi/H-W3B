@@ -12,7 +12,7 @@ const MapComponent = () => {
 
   // Add a surrounding div with a background color style
   return (
-    <div style={{ backgroundColor: '#f0f0f0', height: '100vh', width: '100vw' }}> {/* Adjust the background color as needed */}
+    <div style={{ backgroundColor: '#f5f5dc', height: '100vh', width: '100vw' }}> {/* Adjust the background color as needed */}
       <MapContainer center={[48.8566, 2.3522]} zoom={13} style={{ height: '400px', width: '100%' }} onClick={handleMapClick}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

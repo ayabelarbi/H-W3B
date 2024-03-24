@@ -21,6 +21,7 @@ const Leaderboard = () => {
       justifyContent="center"
       bgGradient="linear(to-b, #CC9975, #f5f5dc, #ffffff)"
       height="100vh"
+      fontFamily={'Roboto'}
       width="100vw"
       padding={4}
     >
@@ -30,9 +31,9 @@ const Leaderboard = () => {
       </Heading>
       <VStack spacing={5}>
         {leaderboardData.map((entry) => (
-          <HStack key={entry.id} boxShadow="md" p={6} borderRadius="md" width="sm" justifyContent="space-between" bg="white" _hover={{ boxShadow: "lg" }}>
+          <HStack key={entry.id} boxShadow="md" p={6} borderRadius="md" width="sm" justifyContent="space-between" bg='#F3EBDC' _hover={{ boxShadow: "lg" }}>
             <Image boxSize="50px" borderRadius="full" src={entry.logo} alt={entry.name} />
-            <Text fontWeight="bold">{entry.name}</Text>
+            <Text fontWeight="bold" >{entry.name}</Text>
             <Text>{entry.score}</Text>
           </HStack>
         ))}

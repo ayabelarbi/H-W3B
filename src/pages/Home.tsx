@@ -34,7 +34,7 @@ function Home() {
       <Navbar /> 
 
       <h1 className="title">LOYALT</h1>
-      <h2 className="subtitle">Earn tokens, perks, and exclusive rewards at your favorite shops.</h2>
+      <h2 className="subtitle">Earn experiences, perks, and exclusive rewards at your favorite shops.</h2>
 
       <Button
          colorScheme='whiteAlpha'
@@ -50,7 +50,7 @@ function Home() {
         <Heading
         fontFamily={'Roboto'}
         fontSize="xl"
-        >Who are you</Heading>
+        >Identify</Heading>
       </Button>
     </Box>
   );
