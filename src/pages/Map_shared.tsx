@@ -1,4 +1,3 @@
-// Map.tsx
 import React from 'react';
 
 interface MapProps {
