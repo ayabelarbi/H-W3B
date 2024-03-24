@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+## LOYALT
+LoyalT réinvente la fidélisation avec un NFT évolutif et des quêtes quotidiennes qui gamifient l’expérience utilisateur. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Démarrage rapide
+Instructions pour lancer le projet :
 
-Currently, two official plugins are available:
+git clone https://github.com/ayabelarbi/H-W3B
+# Aller dans le dossier du projet
+cd src
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Installer les dépendances
+npm install
 
-## Expanding the ESLint configuration
+# Lancer le projet
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Fonctionnalité
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Un login permettant de se connecter et récuperer un token
+- Une interface utilisateur permettant de consulter les restaurants dans lequel on peut faire une quête/mission
+- Une interface retail permettant d'enregistrer une nouvelle mission pour son restaurant
+- Une Navigation Panel permettant de : 
+  - Consulter une Map
+  - Consulter le classement dans le LeaderBoard des clients ayant fait le plus de missions / ayant acheté le plus
+  - Consulter dans Collection les cartes de fidelité ou les quêtes que l'utilisateur à accepté
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Note : 
+Nous avons voulu implémenter une base de donnée avec fireBase. Celle-ci aurait permit d'enregistrer dans une base les différentes missions des restaurants que les retails auraient pu enregistrer. Par manque de temps, nous n'avons pu aboutir à cette fonctionnalité.
+
+## Pages / Composants
+
+# dans le fichier src
+
+# fichier pages
+- Home.tsx : Page d'accueil 
+- Navbar.tsx : Navigation Panel qui permet de :
+  - se connecter via Login
+  - consulter la map avec map.tsx
+  - consulter le classement avec leaderboard.tsx
+  - consulter tes collection avec Collection.tsx
+- getstarted.tsx : Page permettant de s'identifier en tant que client ou retail 
+- ClientPage.tsx : Page qui contient l'interface du client
+- RetailPage.tsx : Page qui contient l'interface du retail
+
+# fichier Design 
+- contient nos photos utilisé
+
+
+
+## Auteurs
+
+- Belarbi Aya : https://github.com/ayabelarbi
+- Saïdi Kim : https://github.com/KIMSAIDI
+

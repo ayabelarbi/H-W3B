@@ -89,13 +89,13 @@ const RetailPage = () => {
         ` }} />
         <Box>
           <p>Name of the restaurant</p>
-          <Input width='50%' placeholder="Enter info" />
+          <Input width='50%' placeholder="Type here..." />
 
           <p>Adresse</p>
-          <Input width='50%' placeholder="Enter info" />
+          <Input width='50%' placeholder="Type here..." />
           
           <p>Mission Description</p>
-          <Textarea width='50%' placeholder="Enter info" />
+          <Textarea width='50%' placeholder="Type here..." />
 
           <div data-date>
             <p>Start date</p>
@@ -110,7 +110,7 @@ const RetailPage = () => {
       <div style={{ height: '400px', width: '400px', position: 'fixed', right: '10px', top: '30%', zIndex: 1000, left: '70%' }}>
          <MapContainer center={[48.8566, 2.3522]} zoom={13} style={{ height: '100%', width: '100%' }}>
          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-         {/*  <LocationSelector onLocationSelect={(location) => location && setSelectedLocation(location)} /> */}
+         {/* <LocationSelector onLocationSelect={(location) => location && setSelectedLocation(location)} /> */} 
  </MapContainer>
   
   </div>

@@ -31,7 +31,7 @@ function Collection() {
                 overflowY="auto" // Active le défilement vertical si le contenu dépasse la hauteur maximale
                 padding="20px"
             >
-                <Box color="white" fontFamily="Roboto" textAlign="center" >
+                <Box color="whiteAlpha" fontFamily="Roboto" textAlign="center" >
                     <h1>My Collection</h1>
                     <SimpleGrid columns={[1, null, 3]} spacing="40px">
                         {images.map((image, index) => (
