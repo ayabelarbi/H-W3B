@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Image, SimpleGrid } from '@chakra-ui/react';
 import Navbar from './Navbar';
-import image1 from '../Design/1.jpg';
-import image2 from '../Design/2.jpg';
-import image3 from '../Design/3.jpg';
-import image4 from '../Design/4.jpg';
-import image5 from '../Design/5.jpg';
-import image6 from '../Design/6.jpg';
+import image1 from '../Design/1.png';
+import image2 from '../Design/2.png';
+import image3 from '../Design/3.png';
+import image4 from '../Design/4.png';
+import image5 from '../Design/5.png';
+import image6 from '../Design/6.png';
 
 function Collection() {
     const images = [image1, image2, image3, image4, image5, image6];
@@ -31,7 +31,7 @@ function Collection() {
                 overflowY="auto" // Active le défilement vertical si le contenu dépasse la hauteur maximale
                 padding="20px"
             >
-                <Box color="white" fontFamily="Roboto" textAlign="center">
+                <Box color="white" fontFamily="Roboto" textAlign="center" >
                     <h1>My Collection</h1>
                     <SimpleGrid columns={[1, null, 3]} spacing="40px">
                         {images.map((image, index) => (

@@ -1,47 +1,46 @@
+import React, { useState } from 'react';
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet'; // Importation de Leaflet pour accéder aux types
-import { Box, Input, Textarea } from '@chakra-ui/react';
-import Navbar from './Navbar';
+import { Box, Button, Input, Textarea } from '@chakra-ui/react';
+import { collection, addDoc } from 'firebase/firestore';
 import { db } from './api/firebaseConfig';
-import { collection, addDoc } from "firebase/firestore"; 
+import Navbar from './Navbar';
 
-const saveLocationDataToFirestore = async (locationData: any) => {
-  try {
-    const docRef = await addDoc(collection(db, "locations"), locationData);
-    console.log("Document écrit avec ID: ", docRef.id);
-  } catch (e) {
-    console.error("Erreur lors de l'ajout du document: ", e);
-  }
-};
-
-const LocationMarker = () => {
+// Component to handle map events and select location
+const LocationSelector = ({ onLocationSelect }: { onLocationSelect: (location: { lat: number, lng: number }) => void }) => {
   useMapEvents({
-    click: async (e) => {
-      // Les coordonnées du point cliqué
-      const { lat, lng } = e.latlng;
-      
-      // Sauvegarde des données dans Firestore
-      const locationData = { latitude: lat, longitude: lng, timestamp: new Date() };
-      
-      try {
-        await saveLocationToFirestore(locationData);
-        console.log("Location saved to Firestore successfully.");
-      } catch (error) {
-        console.error("Error saving location to Firestore: ", error);
-      }
-    }
+    click(e) {
+      onLocationSelect(e.latlng);
+    },
   });
 
-  return null; 
-};
+  return null;
+}
+
+const RetailPage = () => {
+  const [selectedLocation, setSelectedLocation] = useState<{ lat: number; lng: number; } | null>(null);
 
 
+//   const handleSubmit = async () => {
+//     if (!selectedLocation) {
+//       alert("Veuillez sélectionner une localisation sur la carte.");
+//       return;
+//     }else{
+//       console.log("selection located = ", selectedLocation);
+//       try {
+//         await setDoc(doc(db, "your_collection_id", "custom_document_id"), newData);
+//         console.log("Document written with ID: ", docRef.id);
+//         alert("Localisation enregistrée avec succès.");
+        
+//       } catch (e) {
+//         console.error("Error adding document: ", e);
+//         alert("Erreur lors de l'enregistrement de la localisation.");
+//     }
+//   }
+// }
 
+    
 
-function RetailPage() {
-  
-  
 
   return (
     <Box
@@ -54,6 +53,11 @@ function RetailPage() {
       width="100vw"
     >
       <Navbar />
+
+      {/* <form onSubmit={handleSubmit}>
+     
+        <button type="submit">Submit</button>
+      </form> */}
 
       <div className="information_retail" style={{ width: '80%', maxWidth: '960px', margin: '0 auto', padding: '20px', boxSizing: 'border-box' }}>
         <style dangerouslySetInnerHTML={{ __html: `
@@ -102,20 +106,23 @@ function RetailPage() {
         </Box>
       </div>
 
-      // Et dans votre MapContainer :
-<div style={{ height: '400px', width: '400px', position: 'fixed', right: '10px', top: '30%', zIndex: 1000, left: '70%' }}>
-  <MapContainer center={[48.8566, 2.3522]} zoom={13} style={{ height: '100%', width: '100%' }}>
-    <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-    <LocationMarker />
-  </MapContainer>
-</div>
+      
+      <div style={{ height: '400px', width: '400px', position: 'fixed', right: '10px', top: '30%', zIndex: 1000, left: '70%' }}>
+         <MapContainer center={[48.8566, 2.3522]} zoom={13} style={{ height: '100%', width: '100%' }}>
+         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+         {/*  <LocationSelector onLocationSelect={(location) => location && setSelectedLocation(location)} /> */}
+ </MapContainer>
+  
+  </div>
+
+      {/* <Button onClick={handleSubmit} mt="4" colorScheme="blue">
+        Enregistrer la Localisation
+      </Button> */}
 
     </Box>
+
   );
 }
 
 export default RetailPage;
-function saveLocationToFirestore(locationData: { latitude: number; longitude: number; timestamp: Date; }) {
-  throw new Error('Function not implemented.');
-}
 
